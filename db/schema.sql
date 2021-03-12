@@ -1,11 +1,11 @@
-DROP DATABASE if exists company_db;
-CREATE DATABASE company_db;
+-- DROP DATABASE if exists company_db;
+-- CREATE DATABASE company_db;
 
 USE company_db;
 
 CREATE TABLE department (
     depid INT AUTO_INCREMENT NOT NULL,
-    dept_name VARCHAR(30) NOT NULL
+    dept_name VARCHAR(30) NOT NULL,
     PRIMARY KEY(depid)
 );
 
