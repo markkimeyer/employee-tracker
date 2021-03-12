@@ -64,7 +64,19 @@ const init = function() {
 ])
     .then((res) => {
         console.log(res);
-});
+        connection.query(
+            'INSERT INTO employee SET ?',
+            {
+                first_name: res.first_name,
+                last_name: res.last_name,
+                role: res.role,
+                manager: res.manager
+            },
+            function(err, res) {
+                if (err) throw err;
+                console.log("Employee Inserted");
+            }
+);
 
-
-};
+        });
+    };
