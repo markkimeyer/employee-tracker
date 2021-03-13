@@ -1,7 +1,7 @@
 const connection = require('./config/connection');
 const inquirer = require('inquirer');
 const create = require('./lib/create');
-const update = require('./lib/update');
+// const update = require('./lib/update');
 const view = require('./lib/read');
 
 
@@ -10,7 +10,7 @@ connection.connect((err) => {
     init();
 });
 
-const init = function () {
+const init = () => {
     inquirer.prompt({
         name: 'menu',
         type: 'list',
@@ -28,11 +28,20 @@ const init = function () {
                 case ('Create Employee'):
                    create.createEmployee();
                     break;
-                case ('Update Employee Role'):
-                    update.updateEmployeeRole();
-                    break;
+                // case ('Update Employee Role'):
+                //     update.updateEmployeeRole();
+                //     break;
                 case ('View Employees'):
                     view.viewEmployeeRole();
+                    setTimeout(init, 2000);
+                    break;
+                case ('View Roles'):
+                    view.viewEmployeeRoleByRole();
+                    setTimeout(init, 2000);
+                    break;
+                case ('View Departments'):
+                    view.viewEmployeeRoleByDept();
+                    setTimeout(init, 2000);
                     break;
                 default:
                     console.log('Error');
