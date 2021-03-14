@@ -17,6 +17,7 @@ const init = () => {
         choices: [
             'Add Employee',
             'Add Role',
+            'Add Department',
             'View Employees',
             'View Roles',
             'View Departments',
@@ -34,6 +35,10 @@ const init = () => {
                      create.addRole();
                     //  setTimeout(init, 2000)
                     break;
+                 case ('Add Department'):
+                    create.addDept();
+                       //  setTimeout(init, 2000)
+                       break;
                 case ('View Employees'):
                     view.viewEmployeeRole();
                     setTimeout(init, 2000);

@@ -16,6 +16,6 @@ Example of viewing the tables for employees, roles, and departments:
  ![Screenshot](/images/view-screenshot.jpg)
 
 ## Demo
-Watch the demo video on YouTube [here](https://).
+Watch the demo video on YouTube [here](https://youtu.be/A7ybC2ELRc0).
 
 

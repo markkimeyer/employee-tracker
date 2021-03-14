@@ -8,7 +8,7 @@ VALUES
 INSERT INTO role (roleid, title, salary, dept_id)
 VALUES
 (1, 'Support Analyst', 40000,1),
-(2, 'Support Specialist', 50000,1)
+(2, 'Support Specialist', 50000,1),
 (3, 'Implementation Specialist', 60000,2),
 (4, 'Developer', 85000,3),
 (5, 'Quality Assurance Analyst', 70000,3);
