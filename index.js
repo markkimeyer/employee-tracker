@@ -15,7 +15,8 @@ const init = () => {
         name: 'menu',
         type: 'list',
         choices: [
-            'Create Employee',
+            'Add Employee',
+            'Add Role',
             'View Employees',
             'View Roles',
             'View Departments',
@@ -25,12 +26,14 @@ const init = () => {
     })
         .then((res) => {
             switch (res.menu) {
-                case ('Create Employee'):
+                case ('Add Employee'):
                    create.createEmployee();
+                //    setTimeout(init, 1000);
                     break;
-                // case ('Update Employee Role'):
-                //     update.updateEmployeeRole();
-                //     break;
+                case ('Add Role'):
+                     create.addRole();
+                    //  setTimeout(init, 2000)
+                    break;
                 case ('View Employees'):
                     view.viewEmployeeRole();
                     setTimeout(init, 2000);

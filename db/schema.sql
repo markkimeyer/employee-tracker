@@ -1,5 +1,5 @@
--- DROP DATABASE if exists company_db;
--- CREATE DATABASE company_db;
+DROP DATABASE if exists company_db;
+CREATE DATABASE company_db;
 
 USE company_db;
 
@@ -13,9 +13,9 @@ CREATE TABLE role(
     roleid INT AUTO_INCREMENT,
     title VARCHAR(30),
     salary DEC (10,2),
-    dept_id INT NOT NULL,
-    PRIMARY KEY (roleid),
-    FOREIGN KEY (dept_id) REFERENCES department(depid)
+    dept_id INT,
+PRIMARY KEY (roleid),
+FOREIGN KEY (dept_id) REFERENCES department(depid)
 );
 
 CREATE TABLE employee(
@@ -25,8 +25,5 @@ CREATE TABLE employee(
     role_id INT,
     manager_id INT,
     PRIMARY KEY (empid),
-    FOREIGN KEY (role_id) REFERENCES role(roleid),
-    FOREIGN KEY (manager_id) REFERENCES employee(empid)
+    FOREIGN KEY (role_id) REFERENCES role(roleid)
 );
-
-
